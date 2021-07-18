@@ -43,3 +43,4 @@ Peripherals
    watchdog.rst
    video.rst
    espi.rst
+   w1.rst
