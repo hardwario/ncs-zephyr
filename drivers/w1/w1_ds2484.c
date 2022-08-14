@@ -91,17 +91,19 @@ static int ds2484_pm_control(const struct device *dev, enum pm_device_action act
 
 	switch (action) {
 	case PM_DEVICE_ACTION_SUSPEND:
-		if (config->slpz_spec.port) {
+		if (!config->slpz_spec.port) {
 			return -ENOTSUP;
 		}
 		return gpio_pin_set_dt(&config->slpz_spec, 1);
 	case PM_DEVICE_ACTION_RESUME:
-		if (config->slpz_spec.port) {
+		if (!config->slpz_spec.port) {
 			return -ENOTSUP;
 		}
 		return gpio_pin_set_dt(&config->slpz_spec, 0);
 	case PM_DEVICE_ACTION_TURN_OFF:
+		__fallthrough;
 	case PM_DEVICE_ACTION_TURN_ON:
+		__fallthrough;
 	case PM_DEVICE_ACTION_FORCE_SUSPEND:
 		return -ENOTSUP;
 	};
