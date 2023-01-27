@@ -36,7 +36,7 @@ static const uint16_t measure_cmd[5][3] = {
 #endif
 
 static const int measure_wait[3] = {
-	4000, 6000, 15000
+	10000, 15000, 30000
 };
 
 /*
