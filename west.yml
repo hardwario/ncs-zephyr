@@ -21,7 +21,8 @@ manifest:
   remotes:
     - name: upstream
       url-base: https://github.com/zephyrproject-rtos
-
+    - name: hardwario
+      url-base: https://github.com/hardwario
   #
   # Please add items below based on alphabetical order
   projects:
@@ -83,7 +84,9 @@ manifest:
       groups:
         - hal
     - name: hal_nordic
-      revision: 140140ea047f441fe076d26f79eb54dc9a38bcb6
+      remote: hardwario
+      repo-path: zephyr-hal-nordic
+      revision: nrfx-2.11.0-chester
       path: modules/hal/nordic
       groups:
         - hal
