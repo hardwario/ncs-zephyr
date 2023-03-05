@@ -23,6 +23,8 @@ manifest:
       url-base: https://github.com/zephyrproject-rtos
     - name: babblesim
       url-base: https://github.com/BabbleSim
+    - name: hardwario
+      url-base: https://github.com/hardwario
 
   group-filter: [-babblesim, -optional]
 
@@ -183,7 +185,9 @@ manifest:
       groups:
         - hal
     - name: hal_nordic
-      revision: ab5cb2e2faeb1edfad7a25286dcb513929ae55da
+      remote: hardwario
+      repo-path: zephyr-hal-nordic
+      revision: nrfx-3.5.0-chester
       path: modules/hal/nordic
       groups:
         - hal
